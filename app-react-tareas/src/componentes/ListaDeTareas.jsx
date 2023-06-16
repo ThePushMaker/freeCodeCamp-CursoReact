@@ -1,6 +1,7 @@
-import React {useState} from "react";
+import React, {useState} from "react";
 import { TareaFormulario } from "./TareaFormulario";
-import '../hojas-de-estilo/ListaDeTareas.css'
+import '../hojas-de-estilo/ListaDeTareas.css';
+import { Tarea } from '../componentes/Tarea';
 
 export function ListaDeTareas () {
 
@@ -12,11 +13,12 @@ export function ListaDeTareas () {
       <TareaFormulario />
       <div className="tareas-lista-contenedor">
         {
-          tareas.map(tarea) => 
+          tareas.map((tarea) => 
           <Tarea 
             texto={tarea.texto}
             completada={tarea.completada}
           />
+          )
         }
         Lista
          {/* <Tarea texto='Aprender React' /> */}
