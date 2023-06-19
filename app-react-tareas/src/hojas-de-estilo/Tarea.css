@@ -11,6 +11,17 @@
   border: 1px solid white;
   cursor: pointer;
 }
+/* colores */
+.tarea-contenedor:nth-child(3n + 1) {
+  background-color: #1b1b32;
+}
+.tarea-contenedor:nth-child(3n + 2) {
+  background-color: #2a2a40;
+}
+.tarea-contenedor:nth-child(3n + 1) {
+  background-color: #3b3b4f;
+}
+
 /* texto */
 .tarea-texto {
   width: 100%;

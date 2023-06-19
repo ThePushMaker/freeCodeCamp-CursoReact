@@ -2,13 +2,19 @@ import React from 'react';
 import '../hojas-de-estilo/Tarea.css'
 import {  AiOutlineCloseCircle  } from 'react-icons/ai';
 
-export function Tarea({ texto, completada }) {
+export function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
   return (
     <div className={completada ? 'tarea-contenedor completada' : 'tarea-contenedor'}>
-      <div className='tarea-texto'>
+      <div 
+        className='tarea-texto'
+        onClick={() => completarTarea(id)}
+      >
         {texto}
       </div>
-      <div className='tarea-contenedor-iconos'>
+      <div 
+        className='tarea-contenedor-iconos'
+        onClick={() => eliminarTarea(id)}
+      >
         <AiOutlineCloseCircle className='tarea-icono' />
       </div>
     </div>
